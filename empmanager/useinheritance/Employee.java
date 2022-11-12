@@ -62,10 +62,27 @@ Creating A super class Employee which is extended or inherited by Manager class
 		return copy;
 	}
 	
-	/** Override hashCode whenever you override equals -- see lesson 11 */
+	
+	/*
+	 * if hashCode() is invoked more than once on the same Object then it must
+	 * consistently return the same Integer value, provided no information used in
+	 * equals(Object) comparison on the Object is modified. It is not necessary that
+	 * this Integer value to be remained same from one execution of the application
+	 * to another execution of the same application. If two Objects are equal,
+	 * according to the equals(Object) method, then hashCode() method must produce
+	 * the same Integer on each of the two Objects. If two Objects are unequal,
+	 * according to the equals(Object) method, It is not necessary the Integer value
+	 * produced by hashCode() method on each of the two Objects will be distinct. It
+	 * can be same but producing the distinct Integer on each of the two Objects is
+	 * better for improving the performance of hashing
+	 */
+	/** Override hashCode whenever you override equals -- see lesson 11
+	 * This method returns the hash code value 
+	 * for the object on which this method is invoked.
+	  */
 	@Override
 	public final int hashCode() {
-		int result = 17;
+ 		int result = 17;
 		long salaryHashLong = Double.doubleToLongBits(salary);
 		int salaryHash = (int) (salaryHashLong ^ (salaryHashLong >>> 32));
 		result = 31 * result + name.hashCode();
