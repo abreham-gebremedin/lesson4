@@ -41,9 +41,17 @@ Creating A super class Employee which is extended or inherited by Manager class
 	 */
 	@Override
 	public final boolean equals(Object ob) {
+		// if  the object references is null return false
 		if (ob == null) return false;
+	    // it checks if the argument is of the 
+        // type Employee by comparing the classes 
+        // of the passed argument and this object.
+        // if(!(obj instance of Employee)) return false;
 		if (!(ob instanceof Employee)) return false;
+        // type casting of the argument. 
 		Employee e = (Employee) ob;
+	    // comparing the state of argument with 
+        // the state of 'this' Object.
 		return (e.name.equals(name) && e.salary==salary && e.hireDay.equals(hireDay));	
 	}
 	
