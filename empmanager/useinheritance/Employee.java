@@ -22,10 +22,7 @@ Creating A super class Employee which is extended or inherited by Manager class
 		return name;
 	}
 
-	public double getSalary() {
-		return salary;
-	}
-
+ 
 	public LocalDate getHireDay() {
 		return hireDay;
 	}
@@ -89,6 +86,11 @@ Creating A super class Employee which is extended or inherited by Manager class
 		result = 31 * result + salaryHash;
 		result = 31 * result + hireDay.hashCode();
 		return result;
+	}
+
+	public double getSalary() {
+		// TODO Auto-generated method stub
+		return salary;
 	}
 	
 

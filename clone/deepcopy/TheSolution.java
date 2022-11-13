@@ -1,4 +1,4 @@
-package lesson4.clone.deepcopy;
+package  deepcopy;
 
 public class TheSolution {
 

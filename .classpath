@@ -2,6 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="accesstype"/>
 	<classpathentry kind="src" path="empmanager"/>
+	<classpathentry kind="src" path="accesstypebadsoln"/>
+	<classpathentry kind="src" path="accesstypegoodsoln"/>
+	<classpathentry kind="src" path="badrandom"/>
+	<classpathentry kind="src" path="clone"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>

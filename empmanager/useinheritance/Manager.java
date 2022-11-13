@@ -1,6 +1,8 @@
 package useinheritance;
 
-  /*Inheritance in java (IS-A relationship) is referred to the ability where 
+import java.time.LocalDate;
+
+/*Inheritance in java (IS-A relationship) is referred to the ability where 
 	child objects inherit or acquire all the properties and behaviors from parent object. 
 	In object oriented programming, inheritance is used to promote the code re-usability.
 	*/
@@ -18,6 +20,7 @@ package useinheritance;
 	//creating Manager class by Extending Employee class to inherit
 class Manager extends Employee {
 	
+ 
 	/*
 	 * Now consider if we do not use inheritance. Then we would have defined name,
 	 * salary, year,month and day in both classes. It would have caused code duplication
@@ -41,13 +44,14 @@ class Manager extends Employee {
         //Other code after calling super class constructor
 		bonus = 0;
 	}
-
+     
 	@Override
 	public double getSalary() {
 		// no direct access to private variables of superclass
 		double baseSalary = super.getSalary();
 		return baseSalary + bonus;
 	}
+ 
 
 	public void setBonus(double b) {
 		bonus = b;
