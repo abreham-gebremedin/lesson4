@@ -29,7 +29,7 @@ public class Prog6 {
 
 		}
 
-		return result;
+		return removeNulls(result);
 	}
 	
 	// verify if there are repeat elements in the array
@@ -45,6 +45,44 @@ public class Prog6 {
 			}
 
 			return false;
+		}
+		
+		// Count elements in the array
+		public static int countElments(String[] source) {
+
+			int numberElements = 0;
+
+			for (String element : source) {
+
+				if (element != null) {
+
+					numberElements++;
+
+				}
+
+			}
+
+			return numberElements;
+
+		} 
+		// Remove nulls
+		public static String[] removeNulls(String[] result) {
+
+			String[] resultWithoutNulls = new String[countElments(result)];
+			int index = 0;
+
+			for (String element : result) {
+
+				if (element != null) {
+
+					resultWithoutNulls[index] = element;
+					index++;
+				}
+
+			}
+
+			return resultWithoutNulls;
+
 		}
 
 }
