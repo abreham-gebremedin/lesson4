@@ -8,11 +8,13 @@ public class Job implements Cloneable {
 		typeOfJob = t;
 	}
 	@Override
-	public Object clone() throws CloneNotSupportedException {
+	public Object clone() throws CloneNotSupportedException  {
 		//shallow copy is fine here – variables are primitive or immutable
 		return (Job)super.clone();
 	}
 	public String toString() {
 		return typeOfJob + ": " + numhours;
 	}
-}
+ }
+	 
+

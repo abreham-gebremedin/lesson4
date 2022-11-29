@@ -1,4 +1,4 @@
-package lesson4.equals.sameclass;
+package  sameclass;
 
 class Person {
 	private String name;

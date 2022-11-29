@@ -6,6 +6,11 @@
 	<classpathentry kind="src" path="accesstypegoodsoln"/>
 	<classpathentry kind="src" path="badrandom"/>
 	<classpathentry kind="src" path="clone"/>
+	<classpathentry kind="src" path="clonegood"/>
+	<classpathentry kind="src" path="closedcurve"/>
+	<classpathentry kind="src" path="clonebad"/>
+	<classpathentry kind="src" path="equals"/>
+	<classpathentry kind="src" path="java8interface"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>

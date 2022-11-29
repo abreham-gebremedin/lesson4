@@ -1,4 +1,4 @@
-package lesson4.closedcurve.bad;
+package bad;
 
 import java.util.Arrays;
 

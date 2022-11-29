@@ -1,4 +1,4 @@
-package lesson4.closedcurve.bad;
+package  bad;
 
 public final class Square  {
 	private final double side;

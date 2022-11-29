@@ -12,6 +12,7 @@ public class TheSolution {
 			// does not modify orig object!
 			joecopy.job.typeOfJob = "Painter";
 			System.out.println(joe); //here joe is not modified, and the painter get the result of joe
+			System.out.println(joecopy);
 		} catch (CloneNotSupportedException e) {
 		}
 	}

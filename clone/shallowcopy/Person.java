@@ -1,4 +1,4 @@
-package lesson4.clone.shallowcopy;
+package  shallowcopy;
 
 public class Person implements Cloneable {
 	String name;

@@ -1,4 +1,4 @@
-package lesson4.equals.sameclass.theproblem;
+package  sameclass.theproblem;
 
 class PersonWithJob extends Person {
 	private double salary;

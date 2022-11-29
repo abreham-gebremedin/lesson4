@@ -1,7 +1,8 @@
-package lesson4.equals.sameclass.theproblem;
+package sameclass.theproblem;
 
 class PersonWithJobWithCounter extends PersonWithJob {
-	static private int counter;
+	@SuppressWarnings("unused")
+	static private int counter=0;
 
 	PersonWithJobWithCounter(String n, double s) {
 		super(n, s);

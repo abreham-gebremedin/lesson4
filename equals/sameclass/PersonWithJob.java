@@ -1,6 +1,6 @@
-package lesson4.equals.sameclass;
+package  sameclass;
 
-class PersonWithJob extends Person {
+class PersonWithJob extends Person  {
 	private double salary;
 
 	PersonWithJob(String n, double s) {
@@ -18,5 +18,6 @@ class PersonWithJob extends Person {
 		boolean isEqual = getName().equals(p.getName()) && this.salary == p.salary;
 		return isEqual;
 	}
+	
 
 }

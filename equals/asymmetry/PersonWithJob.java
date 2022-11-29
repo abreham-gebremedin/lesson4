@@ -1,4 +1,4 @@
-package lesson4.equals.asymmetry;
+package  asymmetry;
 
 class PersonWithJob extends Person {
 	private int salary;

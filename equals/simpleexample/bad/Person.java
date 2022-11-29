@@ -1,6 +1,7 @@
-package lesson4.equals.simpleexample.bad;
+package  simpleexample.bad;
 
 class Person {
+	@SuppressWarnings("unused")
 	private String name;
 	Person(String n) {
 		name = n;

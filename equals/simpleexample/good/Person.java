@@ -1,5 +1,4 @@
-package lesson4.equals.simpleexample.good;
-
+package  simpleexample.good;
 
 
 class Person {

@@ -1,4 +1,4 @@
-package lesson4.closedcurve.good;
+package  good;
 
 public final class Circle extends ClosedCurve {
 	private final double radius;
