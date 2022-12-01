@@ -54,5 +54,12 @@ class ArraySearchTest {
  		System.out.println("The target element is not in the array");
 		
 	}
+	
+	@SuppressWarnings("deprecation")
+	@Test
+	public void morethanoneoccurrence() {
+		
+		
+	}
  
 }
