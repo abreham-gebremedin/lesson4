@@ -11,7 +11,7 @@ package assignment3_4;
  *         can’t be modified with an object reference.
  *        5 Deep Copy of objects should be performed in the getter methods to return a copy rather than returning
  *          the actual object reference)
- *          // Note that there should not be any setters*/
+ *          //6  Note that there should not be any setters*/
 final public class Triangle {
 
 	final private double base;
