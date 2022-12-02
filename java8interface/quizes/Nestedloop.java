@@ -1,4 +1,4 @@
-package nestedloop;
+package quizes;
 
 import java.util.Arrays;
 
@@ -34,6 +34,7 @@ public class Nestedloop {
 	
 	
 	System.out.println(Arrays.toString(twoSum(new int[] {3,2,4},6)));
+	System.out.println(reverse("Kebede Abebe"));
 
 	}
 	
@@ -50,6 +51,35 @@ public class Nestedloop {
 		}
 		return null;
 		
+	}
+	
+	
+	
+	public static String reverse(String input) {
+		// TODO Auto-generated method stub
+//		input="kebede"
+//		edebek expected result
+		char[] in = input.toCharArray();
+//		in=['k','e','b','e','d','e']
+		int begin=0;
+		int end=in.length-1;
+		char temp;
+		while (end>begin) {
+			
+			temp=in[begin];             
+			in[begin]=in[end];          
+			in[end]=temp;               
+			end--;                      
+			begin++;
+//			['e','e','b','e','d','k']  first iteration
+//			['e','d','b','e','e','k']  second iteration
+//			['e','d','e','b','e','k']  third iteration
+//			return
+
+
+		}
+		return new String(in);
+
 	}
 
 }

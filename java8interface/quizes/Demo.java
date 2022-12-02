@@ -1,4 +1,4 @@
-package nestedloop;
+package quizes;
 
 public class Demo extends Example {
 
