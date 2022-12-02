@@ -13,14 +13,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Triangle myTriangle = new Triangle(6.0, 11.0);
-        System.out.println("Area of Triangle is " + myTriangle.computeArea());
+        Triangle triangle = new Triangle(6.0, 11.0);
+        System.out.println("Area of Triangle is " + triangle.computeArea());
  
 
-        Rectangle myRectangle = new Rectangle(6.0, 2.0);
-        System.out.println("Area of Rectangle is " + myRectangle.computeArea());
+        Rectangle rectangle = new Rectangle(6.0, 2.0);
+        System.out.println("Area of Rectangle is " + rectangle.computeArea());
 
-        Circle myCircle = new Circle(3.0);
-        System.out.println("Area of Circle is " + myCircle.computeArea());
+        Circle circle = new Circle(3.0);
+        System.out.print("Area of Circle is ");
+        System.out.printf("%.2f", circle.computeArea());
     }
 }
