@@ -27,18 +27,25 @@ public class Main {
 		System.out.print("See a report of all account balances? (y/n) ");
 		String answer = sc.next();
 		if(answer.equalsIgnoreCase("y")){
-			String info = getFormattedAccountInfo();
+			
 			//display info to console
-			System.out.println(info);
+			for (int i = 0; i < emps.length; i++) {
+				String info = getFormattedAccountInfo(i);
+				System.out.println("===============================================");
+				System.out.println(info);
+				System.out.println("===============================================");
+
+				
+			}
 		}
 		else {
 			//do nothing..the application ends here
 			System.exit(0);
 		}
 	}
-	String getFormattedAccountInfo() {
+	String getFormattedAccountInfo(int i) {
 		//implement
-		System.out.println(emps[0].toString());
-		return null;
+		
+		return emps[i].toString();
 	}
 }

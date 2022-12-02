@@ -10,26 +10,27 @@ public class Employee {
 	private Account checkingAcct;
 	private Account retirementAcct;
 	private String name;
-	private LocalDate hireDate;
-	
-	public Employee(String name, int yearOfHire, int monthOfHire, int dayOfHire){
+	private Date hireDate;
+
+	public Employee(String name, int yearOfHire, int monthOfHire, int dayOfHire) {
 		this.name = name;
-/* update, using LocalDate
-		GregorianCalendar cal = new GregorianCalendar(yearOfHire,monthOfHire-1,dayOfHire);
+		
+//		 * update, using  
+		GregorianCalendar cal = 
+				new GregorianCalendar(yearOfHire, monthOfHire - 1, dayOfHire);
 		hireDate = cal.getTime();
-*/
+		 
 	}
 
-	
 	public void createNewChecking(double startAmount) {
 		// implement
 		checkingAcct = new Account(this, AccountType.CHECKING, startAmount);
-		
+
 	}
 
 	public void createNewSavings(double startAmount) {
 		// implement
-		savingsAcct = new Account(this, AccountType.SAVINGS, startAmount);	
+		savingsAcct = new Account(this, AccountType.SAVINGS, startAmount);
 	}
 
 	public void createNewRetirement(double startAmount) {
@@ -40,71 +41,67 @@ public class Employee {
 	public String getFormattedAcctInfo() {
 		// implement
 		String formattedAccountInfo = String.format("%nACCOUNT INFO FOR %s: %n", name);
-		
-		if(checkingAcct != null) {
+
+		if (checkingAcct != null) {
 			formattedAccountInfo += checkingAcct.toString();
 		}
-		
-		if(savingsAcct != null) {
+
+		if (savingsAcct != null) {
 			formattedAccountInfo += savingsAcct.toString();
 		}
-		
-		if(retirementAcct != null) {
+
+		if (retirementAcct != null) {
 			formattedAccountInfo += retirementAcct.toString();
 		}
-		
-				
+
 		return formattedAccountInfo;
 	}
-	public void deposit(String acctType, double amt){
+
+	public void deposit(String acctType, double amt) {
 		// implement
-		if(checkingAcct.acctType.equals(acctType)) {
+		if (checkingAcct.acctType.equals(acctType)) {
 			checkingAcct.makeDeposit(amt);
 		}
-		
-		else if(savingsAcct.acctType.equals(acctType)) {
+
+		else if (savingsAcct.acctType.equals(acctType)) {
 			savingsAcct.makeDeposit(amt);
 		}
-		
-		else if(retirementAcct.acctType.equals(acctType)) {
+
+		else if (retirementAcct.acctType.equals(acctType)) {
 			retirementAcct.makeDeposit(amt);
 		}
-		
-	}
-	public boolean withdraw(String acctType, double amt){
-		// implement
-		if(acctType.equals(AccountType.CHECKING)) {
-			return checkingAcct.makeWithdrawal(amt);
-		}
-		
-		if(acctType.equals(AccountType.SAVINGS)) {
-			return savingsAcct.makeWithdrawal(amt);
-		}
-		
-		if(acctType.equals(AccountType.RETIREMENT)) {
-			return retirementAcct.makeWithdrawal(amt);
-		}
-		
-		return false;
+
 	}
 
+	public boolean withdraw(String acctType, double amt) {
+		// implement
+		if (acctType.equals(AccountType.CHECKING)) {
+			return checkingAcct.makeWithdrawal(amt);
+		}
+
+		if (acctType.equals(AccountType.SAVINGS)) {
+			return savingsAcct.makeWithdrawal(amt);
+		}
+
+		if (acctType.equals(AccountType.RETIREMENT)) {
+			return retirementAcct.makeWithdrawal(amt);
+		}
+
+		return false;
+	}
 
 	public String getName() {
 		return name;
 	}
 
-
 	public LocalDate getHireDate() {
 		return hireDate;
 	}
-
 
 	@Override
 	public String toString() {
 		return "Employee [savingsAcct=" + savingsAcct + ", checkingAcct=" + checkingAcct + ", retirementAcct="
 				+ retirementAcct + ", name=" + name + ", hireDate=" + hireDate + "]";
 	}
-	
-	
 
 }
