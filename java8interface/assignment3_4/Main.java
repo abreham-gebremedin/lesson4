@@ -6,7 +6,8 @@ dimensions of your figures) and then print to the console the area of each. Typi
 would be: 
        Area of Triangle is 34.75
        Area of Rectangle is 36.0
-       Area of Circle is 58.57*/
+       Area of Circle is 58.57
+*/
 
 public class Main {
 
