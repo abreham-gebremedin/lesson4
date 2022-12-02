@@ -98,10 +98,6 @@ public class Employee {
 		return hireDate;
 	}
 
-	@Override
-	public String toString() {
-		return "Employee [savingsAcct=" + savingsAcct + ", checkingAcct=" + checkingAcct + ", retirementAcct="
-				+ retirementAcct + ", name=" + name + ", hireDate=" + hireDate + "]";
-	}
+ 
 
 }

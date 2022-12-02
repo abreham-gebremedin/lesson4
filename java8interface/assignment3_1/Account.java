@@ -29,6 +29,12 @@ class Account {
 		this.balance=this.balance+deposit;
 				
 	}
+	
+	
+	//updates the balance field and returns true, unless 
+	//withdrawal amount is too large; in that case, 
+	//it does not modify the balance field, and returns false
+//	public boolean makeWithdrawal(double amount)
 	public boolean makeWithdrawal(double amount) {
 		//implement
 		if(this.balance>amount)

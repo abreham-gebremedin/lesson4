@@ -46,6 +46,6 @@ public class Main {
 	String getFormattedAccountInfo(int i) {
 		//implement
 		
-		return emps[i].toString();
+		return emps[i].getFormattedAcctInfo();
 	}
 }
