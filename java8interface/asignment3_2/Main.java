@@ -33,6 +33,7 @@ public class Main {
 		}
 		else {
 			//do nothing..the application ends here
+			System.exit(0);
 		}
 	}
 	String getFormattedAccountInfo() {
