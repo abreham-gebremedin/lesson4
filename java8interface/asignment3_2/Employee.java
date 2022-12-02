@@ -94,7 +94,7 @@ public class Employee {
 		return name;
 	}
 
-	public LocalDate getHireDate() {
+	public Date getHireDate() {
 		return hireDate;
 	}
 
