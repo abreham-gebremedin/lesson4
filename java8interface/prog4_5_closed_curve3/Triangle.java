@@ -1,4 +1,4 @@
-package prog4_4_closed_curve2;
+package prog4_5_closed_curve3;
 
 import java.util.Arrays;
 
@@ -80,15 +80,9 @@ public final class Triangle extends ClosedCurve implements Polygon {
 	}
 
 	@Override
-	public int getNumberOfSides() {
+	public double[] getArrayOfSides() {
 		// TODO Auto-generated method stub
-		return 3;
-	}
-
-	@Override
-	public double computePerimeter() {
-		// TODO Auto-generated method stub
-		return 0;
+		return new double[] {side1,side2,side3};
 	}
 
  
