@@ -34,7 +34,8 @@ public class Main {
 			System.out.println("A. See a report of all accounts.");
 			System.out.println("B. Make a deposit.\r\n"+ "");
 			System.out.println("C. Make a withdrawal.\r\n");
-			System.out.println("Make a selection (A/B/C):\r\n");
+			System.out.println("D. Read Account.\r\n");
+			System.out.println("Make a selection (A/B/C/D):\r\n");
 			Scanner sc = new Scanner(System.in);
 			String answer1 = sc.next();
 			switch (answer1) {
@@ -42,7 +43,7 @@ public class Main {
 				//display info to console
 				for (int i = 0; i < emps.length; i++) {
 					String info = getFormattedAccountInfo(i);
-					
+
 					System.out.println("===============================================");
 					System.out.println(info);
 					System.out.println("===============================================");
@@ -63,12 +64,12 @@ public class Main {
 					switch (c) {
 					case 0:
 						do {
-							
+
 							System.out.println("1. checking");
 							System.out.println("2. savings");
 							System.out.println("3. retirement");
 							System.out.println("Select an account: (type a number)"); 
- 
+
 
 							int c2=sc.nextInt();
 
@@ -77,9 +78,10 @@ public class Main {
 								System.out.println("Deposit amount: ");
 								balance=sc.nextDouble();		
 								emps[0].deposit(0,balance );
- 								System.out.println(balance+" has been deposited in the Checking Account"); 
+								System.out.println(balance+" has been deposited in the Checking Account"); 
 								String info = getFormattedAccountInfo(0);
-								
+
+
 								System.out.println("===============================================");
 								System.out.println(info);
 								System.out.println("===============================================");
@@ -89,9 +91,9 @@ public class Main {
 								System.out.println("Deposit amount: ");
 								balance=sc.nextDouble();
 								emps[0].deposit(1,balance );
- 								System.out.println(balance+" has been deposited in the Saving Account"); 
-								 info = getFormattedAccountInfo(0);
-								
+								System.out.println(balance+" has been deposited in the Saving Account"); 
+								info = getFormattedAccountInfo(0);
+
 								System.out.println("===============================================");
 								System.out.println(info);
 								System.out.println("===============================================");
@@ -101,138 +103,138 @@ public class Main {
 								System.out.println("Deposit amount: ");
 								balance=sc.nextDouble();
 								emps[0].deposit(2,balance );
- 								System.out.println(balance+" has been deposited in the Retirement  Account"); 
-								 info = getFormattedAccountInfo(0);
-								
+								System.out.println(balance+" has been deposited in the Retirement  Account"); 
+
+								info = getFormattedAccountInfo(0);
 								System.out.println("===============================================");
 								System.out.println(info);
 								System.out.println("===============================================");
-							break;
+								break;
 
 							default:
 								System.out.println("No Account created");
 								break;
 							}
-		                 System.out.println("Press Y or y to exit");
-		 				   exitanswer = sc.next();
+							System.out.println("Press Y or y to exit");
+							exitanswer = sc.next();
 						} while (exitanswer.equalsIgnoreCase("Y"));
 
 						break;
 					case 1:
- 						do {
-							
+						do {
+
 							System.out.println("1. checking");
 							System.out.println("2. savings");
 							System.out.println("3. retirement");
 							System.out.println("Select an account: (type a number)"); 
 							Scanner sc1=new Scanner(System.in);
- 
-						int c3=sc1.nextInt();
 
-						switch (c3) {
-						case 1:
-							System.out.println("Deposit amount: ");
-							balance=sc.nextDouble();
-							emps[1].deposit(0,balance );
+							int c3=sc1.nextInt();
+
+							switch (c3) {
+							case 1:
+								System.out.println("Deposit amount: ");
+								balance=sc.nextDouble();
+								emps[1].deposit(0,balance );
 								System.out.println(balance+" has been deposited in the Checking Account"); 
-							String info = getFormattedAccountInfo(1);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
+								String info = getFormattedAccountInfo(1);
 
-							break;
-						case 2:
-							System.out.println("Deposit amount: ");
-							balance=sc.nextDouble();
-							emps[1].deposit(1,balance );
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+
+								break;
+							case 2:
+								System.out.println("Deposit amount: ");
+								balance=sc.nextDouble();
+								emps[1].deposit(1,balance );
 								System.out.println(balance+" has been deposited in the Saving Account"); 
-							 info = getFormattedAccountInfo(1);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
-						case 3:
-							System.out.println("Deposit amount: ");
-							balance=sc.nextDouble();
-							emps[1].deposit(2,balance );
-								System.out.println(balance+" has been deposited in the Retirement  Account"); 
-							 info = getFormattedAccountInfo(1);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
+								info = getFormattedAccountInfo(1);
 
-						default:
-							System.out.println("No Account created");
-							break;
-						}
-	                 System.out.println("Press Y or y to exit");
-	 				   exitanswer = sc.next();
-					} while (exitanswer.equalsIgnoreCase("Y"));
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+							case 3:
+								System.out.println("Deposit amount: ");
+								balance=sc.nextDouble();
+								emps[1].deposit(2,balance );
+								System.out.println(balance+" has been deposited in the Retirement  Account"); 
+								info = getFormattedAccountInfo(1);
+
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+
+							default:
+								System.out.println("No Account created");
+								break;
+							}
+							System.out.println("Press Y or y to exit");
+							exitanswer = sc.next();
+						} while (exitanswer.equalsIgnoreCase("Y"));
 						break;
 					case 2:
- 						do {
-							
+						do {
+
 							System.out.println("1. checking");
 							System.out.println("2. savings");
 							System.out.println("3. retirement");
 							System.out.println("Select an account: (type a number)"); 
- 
-						int c3=sc.nextInt();
 
-						switch (c3) {
-						case 1:
-							System.out.println("Deposit amount: ");
-							balance=sc.nextDouble();
-							emps[2].deposit(0,balance );
+							int c3=sc.nextInt();
+
+							switch (c3) {
+							case 1:
+								System.out.println("Deposit amount: ");
+								balance=sc.nextDouble();
+								emps[2].deposit(0,balance );
 								System.out.println(balance+" has been deposited in the Checking Account"); 
-							String info = getFormattedAccountInfo(2);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
+								String info = getFormattedAccountInfo(2);
 
-							break;
-						case 2:
-							System.out.println("Deposit amount: ");
-							balance=sc.nextDouble();
-							emps[2].deposit(1,balance );
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+
+								break;
+							case 2:
+								System.out.println("Deposit amount: ");
+								balance=sc.nextDouble();
+								emps[2].deposit(1,balance );
 								System.out.println(balance+" has been deposited in the Saving Account"); 
-							 info = getFormattedAccountInfo(2);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
-						case 3:
-							System.out.println("Deposit amount: ");
-							balance=sc.nextDouble();
-							emps[2].deposit(2,balance );
-								System.out.println(balance+" has been deposited in the Retirement  Account"); 
-							 info = getFormattedAccountInfo(2);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
+								info = getFormattedAccountInfo(2);
 
-						default:
-							System.out.println("No Account created");
-							break;
-						}
- 
-					} while (exitanswer.equalsIgnoreCase("Y"));
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+							case 3:
+								System.out.println("Deposit amount: ");
+								balance=sc.nextDouble();
+								emps[2].deposit(2,balance );
+								System.out.println(balance+" has been deposited in the Retirement  Account"); 
+								info = getFormattedAccountInfo(2);
+
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+
+							default:
+								System.out.println("No Account created");
+								break;
+							}
+
+						} while (exitanswer.equalsIgnoreCase("Y"));
 
 						break;
 
 					default:
 						break;
 					}
-                 System.out.println("Press Y or y to exit");
- 				   exitanswer = sc.next();
+					System.out.println("Press Y or y to exit");
+					exitanswer = sc.next();
 				} while (exitanswer.equalsIgnoreCase("Y"));
 				break;
 			}
@@ -248,12 +250,12 @@ public class Main {
 					switch (c) {
 					case 0:
 						do {
-							
+
 							System.out.println("1. checking");
 							System.out.println("2. savings");
 							System.out.println("3. retirement");
 							System.out.println("Select an account: (type a number)"); 
- 
+
 
 							int c2=sc.nextInt();
 
@@ -261,10 +263,11 @@ public class Main {
 							case 1:
 								System.out.println("Withdraw amount: ");
 								balance=sc.nextDouble();
- 								emps[0].withdraw(0,balance );
- 								System.out.println(balance+" has been Withdrawed in the Checking Account"); 
+								emps[0].withdraw(0,balance );
+								System.out.println(balance+" has been Withdrawed in the Checking Account"); 
 								String info = getFormattedAccountInfo(0);
-								
+
+
 								System.out.println("===============================================");
 								System.out.println(info);
 								System.out.println("===============================================");
@@ -274,160 +277,285 @@ public class Main {
 								System.out.println("Withdraw amount: ");
 								balance=sc.nextDouble();
 								emps[0].withdraw(1,balance );
- 								System.out.println(balance+" has been Withdrawed in the Saving Account"); 
-								 info = getFormattedAccountInfo(0);
-								
+								System.out.println(balance+" has been Withdrawed in the Saving Account"); 
+								info = getFormattedAccountInfo(0);
+
+
 								System.out.println("===============================================");
 								System.out.println(info);
 								System.out.println("===============================================");
 
 								break;
 							case 3:
-								System.out.println("Withdraw amount: ");
+								System.out.println("Withdraw amount:");
 								balance=sc.nextDouble();
 								emps[0].withdraw(2,balance );
- 								System.out.println(balance+" has been Withdrawed in the Retirement  Account"); 
-								 info = getFormattedAccountInfo(0);
-								
+								System.out.println(balance+" has been Withdrawed in the Retirement  Account"); 
+								info = getFormattedAccountInfo(0);
+
+
 								System.out.println("===============================================");
 								System.out.println(info);
 								System.out.println("===============================================");
-							break;
+								break;
 
 							default:
 								System.out.println("No Account created");
 								break;
 							}
-		                 System.out.println("Press Y or y to exit");
-		 				   exitanswer = sc.next();
+							System.out.println("Press Y or y to exit");
+							exitanswer = sc.next();
 						} while (exitanswer.equalsIgnoreCase("Y"));
 
 						break;
 					case 1:
- 						do {
-							
+						do {
+
 							System.out.println("1. checking");
 							System.out.println("2. savings");
 							System.out.println("3. retirement");
 							System.out.println("Select an account: (type a number)"); 
 							Scanner sc1=new Scanner(System.in);
- 
-						int c3=sc1.nextInt();
 
-						switch (c3) {
-						case 1:
-							System.out.println("Withdraw amount: ");
-							balance=sc.nextDouble();
-							emps[1].withdraw(0,balance );
+							int c3=sc1.nextInt();
+
+							switch (c3) {
+							case 1:
+								System.out.println("Withdraw amount: ");
+								balance=sc.nextDouble();
+								emps[1].withdraw(0,balance );
 								System.out.println(balance+" has been Withdrawed in the Checking Account"); 
-							String info = getFormattedAccountInfo(1);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
+								String info = getFormattedAccountInfo(1);
 
-							break;
-						case 2:
-							System.out.println("Withdraw amount: ");
-							balance=sc.nextDouble();
-							emps[1].withdraw(1,balance );
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+
+								break;
+							case 2:
+								System.out.println("Withdraw amount: ");
+								balance=sc.nextDouble();
+								emps[1].withdraw(1,balance );
 								System.out.println(balance+" has been Withdrawed in the Saving Account"); 
-							 info = getFormattedAccountInfo(1);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
-						case 3:
-							System.out.println("Withdraw amount: ");
-							balance=sc.nextDouble();
-							emps[1].withdraw(2,balance );
-								System.out.println(balance+" has been Withdrawed in the Retirement  Account"); 
-							 info = getFormattedAccountInfo(1);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
+								info = getFormattedAccountInfo(1);
 
-						default:
-							System.out.println("No Account created");
-							break;
-						}
-	                 System.out.println("Press Y or y to exit");
-	 				   exitanswer = sc.next();
-					} while (exitanswer.equalsIgnoreCase("Y"));
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+							case 3:
+								System.out.println("Withdraw amount: ");
+								balance=sc.nextDouble();
+								emps[1].withdraw(2,balance );
+								System.out.println(balance+" has been Withdrawed in the Retirement  Account"); 
+								info = getFormattedAccountInfo(1);
+
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+
+							default:
+								System.out.println("No Account created");
+								break;
+							}
+							System.out.println("Press Y or y to exit");
+							exitanswer = sc.next();
+						} while (exitanswer.equalsIgnoreCase("Y"));
 						break;
 					case 2:
- 						do {
-							
+						do {
+
 							System.out.println("1. checking");
 							System.out.println("2. savings");
 							System.out.println("3. retirement");
 							System.out.println("Select an account: (type a number)"); 
- 
-						int c3=sc.nextInt();
 
-						switch (c3) {
-						case 1:
-							System.out.println("Withdraw amount: ");
-							balance=sc.nextDouble();
-							emps[2].withdraw(0,balance );
+							int c3=sc.nextInt();
+
+							switch (c3) {
+							case 1:
+								System.out.println("Withdraw amount: ");
+								balance=sc.nextDouble();
+								emps[2].withdraw(0,balance );
 								System.out.println(balance+" has been Withdrawed in the Checking Account"); 
-							String info = getFormattedAccountInfo(2);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
+								String info = getFormattedAccountInfo(2);
 
-							break;
-						case 2:
-							System.out.println("Withdraw amount: ");
-							balance=sc.nextDouble();
-							emps[2].withdraw(1,balance );
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+
+								break;
+							case 2:
+								System.out.println("Withdraw amount: ");
+								balance=sc.nextDouble();
+								emps[2].withdraw(1,balance );
 								System.out.println(balance+" has been Withdrawed in the Saving Account"); 
-							 info = getFormattedAccountInfo(2);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
-						case 3:
-							System.out.println("Withdraw amount: ");
-							balance=sc.nextDouble();
-							emps[2].withdraw(2,balance );
-								System.out.println(balance+" has been Withdrawed in the Retirement  Account"); 
-							 info = getFormattedAccountInfo(2);
-							
-							System.out.println("===============================================");
-							System.out.println(info);
-							System.out.println("===============================================");
-							break;
+								info = getFormattedAccountInfo(2);
 
-						default:
-							System.out.println("No Account created");
-							break;
-						}
- 
-					} while (exitanswer.equalsIgnoreCase("Y"));
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+							case 3:
+								System.out.println("Withdraw amount: ");
+								balance=sc.nextDouble();
+								emps[2].withdraw(2,balance );
+								System.out.println(balance+" has been Withdrawed in the Retirement  Account"); 
+								info = getFormattedAccountInfo(2);
+
+								System.out.println("===============================================");
+								System.out.println(info);
+								System.out.println("===============================================");
+								break;
+
+							default:
+								System.out.println("No Account created");
+								break;
+							}
+
+						} while (exitanswer.equalsIgnoreCase("Y"));
 
 						break;
 
 					default:
 						break;
 					}
-                 System.out.println("Press Y or y to exit");
- 				   exitanswer = sc.next();
+					System.out.println("Press Y or y to exit");
+					exitanswer = sc.next();
+				} while (exitanswer.equalsIgnoreCase("Y"));
+				break;
+			}
+			case "D":{
+
+				do {
+					System.out.println("read Account window");
+					for (int i = 0; i < emps.length; i++) {
+						System.out.println("Press "+i+" for " + emps[i].getName());
+					}
+
+					int c=sc.nextInt();
+
+					switch (c) {
+					case 0:
+						do {
+
+							System.out.println("1. checking");
+							System.out.println("2. savings");
+							System.out.println("3. retirement");
+							System.out.println("Select an account: (type a number)"); 
+
+
+							int c2=sc.nextInt();
+
+							switch (c2) {
+							case 1:
+	 
+								System.out.println("Your Balance "+emps[0].readAccount(0));  
+
+								break;
+							case 2:
+								System.out.println("Your Balance "+emps[0].readAccount(1));  
+
+								break;
+							case 3:
+		 
+								System.out.println("Your Balance "+emps[0].readAccount(2));  
+								break;
+
+							default:
+								System.out.println("No Account ");
+								break;
+							}
+							System.out.println("Press Y or y to exit");
+							exitanswer = sc.next();
+						} while (exitanswer.equalsIgnoreCase("Y"));
+
+						break;
+					case 1:
+						do {
+
+							System.out.println("1. checking");
+							System.out.println("2. savings");
+							System.out.println("3. retirement");
+							System.out.println("Select an account: (type a number)"); 
+							Scanner sc1=new Scanner(System.in);
+
+							int c3=sc1.nextInt();
+
+							switch (c3) {
+							case 1:
+ 
+ 								System.out.println("Your Balance "+emps[1].readAccount(0));  
+								break;
+							case 2: 
+								System.out.println("Your Balance "+emps[1].readAccount(1));  
+								break;
+							case 3:
+ 
+
+								System.out.println("Your Balance "+emps[1].readAccount(2));  
+								break;
+
+							default:
+								System.out.println("No Account created");
+								break;
+							}
+							System.out.println("Press Y or y to exit");
+							exitanswer = sc.next();
+						} while (exitanswer.equalsIgnoreCase("Y"));
+						break;
+					case 2:
+						do {
+
+							System.out.println("1. checking");
+							System.out.println("2. savings");
+							System.out.println("3. retirement");
+							System.out.println("Select an account: (type a number)"); 
+
+							int c3=sc.nextInt();
+
+							switch (c3) {
+							case 1:
+	 
+
+								System.out.println("Your Balance "+emps[2].readAccount(0));  
+
+								break;
+							case 2:
+ 
+
+								System.out.println("Your Balance "+emps[2].readAccount(1));  
+								break;
+							case 3:
+ 
+								System.out.println("Your Balance "+emps[2].readAccount(2));  
+								break;
+
+							default:
+								System.out.println("No Account created");
+								break;
+							}
+
+						} while (exitanswer.equalsIgnoreCase("Y"));
+
+						break;
+
+					default:
+						break;
+					}
+					System.out.println("Press Y or y to exit");
+					exitanswer = sc.next();
 				} while (exitanswer.equalsIgnoreCase("Y"));
 				break;
 			}
 			default:
 				System.out.println("Have a nice day");
 				break;
- 			}
+			}
 
 			System.out.print("do you want to continue? (y/n) ");
-			 answer = sc.next();
+			answer = sc.next();
 		} while (answer.equalsIgnoreCase("y"));
 
 
