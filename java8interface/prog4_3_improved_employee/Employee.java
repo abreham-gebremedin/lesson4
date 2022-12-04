@@ -24,6 +24,7 @@ public class Employee {
 	public void createNewChecking(double startAmount) {
 		// implement
 		Account acct = new CheckingAccount(this,startAmount);
+		
 		//accounts is the name of the AccountList variable
 		accounts.add(acct);
 

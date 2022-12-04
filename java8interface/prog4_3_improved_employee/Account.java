@@ -3,7 +3,7 @@ package prog4_3_improved_employee;
 public class Account {
 	private final static double DEFAULT_BALANCE = 0.0;
 	public double balance;
- 	private Employee employee;
+	private Employee employee;
 
 	public Account(Employee emp, double balance) {
 		this.employee = emp;
@@ -13,15 +13,14 @@ public class Account {
 	public Account(Employee emp, AccountType acctType) {
 		this(emp, DEFAULT_BALANCE);
 	}
-    private void getAcc() {
-		// TODO Auto-generated method stub
 
-	}
 	public String toString() {
 		return  "\n Current bal: " + balance;
 	}
-	
+
+ 
 	public double getBalance() {
+
 		return balance;
 	}
 
@@ -30,7 +29,7 @@ public class Account {
 	}
 
 	public boolean makeWithdrawal(double amount) {
-		
+
 		if(amount <= balance) {
 			balance -= amount;
 			return true;
