@@ -1,3 +1,5 @@
+package prog2_6;
+
  
 
 public class TestProg6 {
@@ -15,17 +17,17 @@ public class TestProg6 {
 	// Create Prog6 class
 	//		  method removeDups, exitsElementAt, countElments
 	
-	@SuppressWarnings("deprecation")
-	@Test
-	public void testRemoveDups() {
-		
-		//Test case#1 : Example of the lab two repeated elements
-		String[] source1 = {"horse", "dog", "cat", "horse","dog"};	
-		String[] result1 = {"horse","dog","cat"};
-		
-		assertEquals(result1, Prog6.removeDups(source1));
-	}
-	
+//	@SuppressWarnings("deprecation")
+//	@Test
+//	public void testRemoveDups() {
+//		
+//		//Test case#1 : Example of the lab two repeated elements
+//		String[] source1 = {"horse", "dog", "cat", "horse","dog"};	
+//		String[] result1 = {"horse","dog","cat"};
+//		
+//		assertEquals(result1, Prog6.removeDups(source1));
+//	}
+//	
 	 
 	
 }

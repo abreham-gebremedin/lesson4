@@ -1,4 +1,4 @@
-package prog4_6_equals_case3;
+package prog4_6_equals.prog4_6_equals_case1;
 
 import java.util.GregorianCalendar;
 
@@ -11,4 +11,5 @@ public class PersonWithJob extends Person {
 	public double getSalary() {
 		return salary;
 	} 
+
 } 

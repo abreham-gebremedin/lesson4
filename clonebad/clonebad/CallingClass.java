@@ -7,7 +7,7 @@ public class CallingClass {
 		//clone method not visible from here
 		//even though MyDataClass and CallingClass
 		//are subclasses of Object
-        MyDataClass copy = (MyDataClass)cl.clone();
+//        MyDataClass copy = (MyDataClass)cl.clone();
 		
 		//
 	}
