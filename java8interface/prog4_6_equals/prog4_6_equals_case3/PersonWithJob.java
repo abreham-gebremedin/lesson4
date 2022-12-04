@@ -20,6 +20,6 @@ public class PersonWithJob  {
 		if(!(apersonWithJob instanceof PersonWithJob)) return false;
 		PersonWithJob p= (PersonWithJob) apersonWithJob;
 		PersonWithJob p2 = (PersonWithJob) apersonWithJob2;
-		return p.equals(p2.name) && p.dateOfBirth.equals(p2.dateOfBirth)&&p.salary==p2.salary;
+		return person.name.equals(person.name) && person.dateOfBirth.equals(person.dateOfBirth)&&p.salary==p2.salary;
 	}
 } 
